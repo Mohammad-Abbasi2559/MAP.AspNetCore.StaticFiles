@@ -1,0 +1,1 @@
+With this package you can work with static file name
