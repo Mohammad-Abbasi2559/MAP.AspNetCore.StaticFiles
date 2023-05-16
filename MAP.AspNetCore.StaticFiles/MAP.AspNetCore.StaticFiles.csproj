@@ -12,6 +12,9 @@
     <IncludeSymbols>False</IncludeSymbols>
     <PackageReadmeFile>Readme.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/Mohammad-Abbasi2559/MAP.AspNetCore.StaticFiles</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <Description>With this package you can work with static file</Description>
+    <GenerateDocumentationFile>False</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
