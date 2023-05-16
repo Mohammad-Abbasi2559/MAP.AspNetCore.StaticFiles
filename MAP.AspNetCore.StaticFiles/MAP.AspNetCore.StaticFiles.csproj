@@ -11,6 +11,7 @@
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <IncludeSymbols>False</IncludeSymbols>
     <PackageReadmeFile>Readme.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/Mohammad-Abbasi2559/MAP.AspNetCore.StaticFiles</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
