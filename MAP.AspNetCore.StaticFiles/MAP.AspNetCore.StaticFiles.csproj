@@ -6,6 +6,7 @@
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Version>6.0.0 </Version>
+    <Copyright>All rights reserved</Copyright>
   </PropertyGroup>
 
 </Project>
