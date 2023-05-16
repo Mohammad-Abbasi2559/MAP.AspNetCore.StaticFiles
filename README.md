@@ -6,5 +6,5 @@
 #### More features will be released soon
 
 
-### More details at : [github.com/Mohammad-Abbasi2559/MAP.AspNetCore.StaticFiles]("https://github.com/Mohammad-Abbasi2559/MAP.AspNetCore.StaticFiles")
+### More details at : https://github.com/Mohammad-Abbasi2559/MAP.AspNetCore.StaticFiles/wiki
 
