@@ -7,7 +7,6 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Version>6.0.2</Version>
     <Copyright>All rights reserved</Copyright>
-    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <IncludeSymbols>False</IncludeSymbols>
     <PackageReadmeFile>Readme.md</PackageReadmeFile>
@@ -16,6 +15,7 @@
     <Description>With this package you can work with static file</Description>
     <GenerateDocumentationFile>False</GenerateDocumentationFile>
     <PackageTags></PackageTags>
+    <PackageLicenseExpression>https://www.apache.org/licenses/LICENSE-2.0</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
