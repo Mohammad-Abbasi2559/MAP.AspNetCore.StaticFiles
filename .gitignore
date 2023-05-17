@@ -363,3 +363,4 @@ MigrationBackup/
 FodyWeavers.xsd
 /Readme.md
 /Readme.md
+/MAP.AspNetCore.StaticFiles/nuget.config
