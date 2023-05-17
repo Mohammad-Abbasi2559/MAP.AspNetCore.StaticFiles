@@ -15,7 +15,7 @@
     <Description>With this package you can work with static file</Description>
     <GenerateDocumentationFile>False</GenerateDocumentationFile>
     <PackageTags></PackageTags>
-    <PackageLicenseExpression>https://www.apache.org/licenses/LICENSE-2.0</PackageLicenseExpression>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
