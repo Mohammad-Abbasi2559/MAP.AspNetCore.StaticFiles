@@ -10,8 +10,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Readme.md = Readme.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MAP.AspNetCore.StaticFiles.FilesAction", "MAP.AspNetCore.StaticFiles.FilesAction\MAP.AspNetCore.StaticFiles.FilesAction.csproj", "{6528CAC0-9EA7-4A3B-B7F5-CC1D5DC0E40B}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,10 +20,6 @@ Global
 		{EE4D6668-A2FD-4017-8BC9-FFE0146D49DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE4D6668-A2FD-4017-8BC9-FFE0146D49DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE4D6668-A2FD-4017-8BC9-FFE0146D49DE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6528CAC0-9EA7-4A3B-B7F5-CC1D5DC0E40B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6528CAC0-9EA7-4A3B-B7F5-CC1D5DC0E40B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6528CAC0-9EA7-4A3B-B7F5-CC1D5DC0E40B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6528CAC0-9EA7-4A3B-B7F5-CC1D5DC0E40B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
