@@ -1,4 +1,6 @@
 ﻿
+using System.Linq;
+
 namespace MAP.AspNetCore.StaticFiles;
 
 public static class RegularFileName
@@ -86,24 +88,48 @@ public static class RegularFileName
 
     /// <summary>
     /// Check Url in asp.net Core Actions and Files
-    /// Exception When Use Folder with Index and Home name in wwwroot 
     /// </summary>
-    /// <param name="path1"></param>
-    /// <param name="path2"></param>
+    /// <param name="url1"></param>
+    /// <param name="url2"></param>
     /// <returns></returns>
-    public static bool CheckUrl(string path1, string path2)
+    public static bool CheckUrl(string url1, string url2)
     {
-        path1 = path1.ToLower().Replace("/home/index", string.Empty).Replace("/index", string.Empty);
-        if (path1.EndsWith("/"))
-            path1 = path1.Remove(path1.Length - 1, 1);
+        if (fileNameWithExtensionFromUrl(url1).Contains("?") || fileNameWithExtensionFromUrl(url2).Contains("?"))
+        {
+            url1 = url1.ToLower().Replace("/home/index", string.Empty).Replace("/index", string.Empty);
+            if (url1.EndsWith("/"))
+                url1 = url1.Remove(url1.Length - 1, 1);
 
-        path2 = path2.ToLower().Replace("/home/index", string.Empty).Replace("/index", string.Empty);
-        if (path2.EndsWith("/"))
-            path2 = path2.Remove(path2.Length - 1, 1);
+            url2 = url2.ToLower().Replace("/home/index", string.Empty).Replace("/index", string.Empty);
+            if (url2.EndsWith("/"))
+                url2 = url2.Remove(url2.Length - 1, 1);
 
-        if (path1 == path2)
-            return true;
+            if (url1 == url2)
+                return true;
+        }
+        else
+        {
+            if(FileContentType.TryContentType(fileNameWithExtensionFromUrl(url1)) || FileContentType.TryContentType(fileNameWithExtensionFromUrl(url2)))
+            {
+                url1 = url1.ToLower();
+                url2 = url2.ToLower();
+                if(url1 == url2)
+                    return true;
+            }
+            else
+            {
+                url1 = url1.ToLower().Replace("/home/index", string.Empty).Replace("/index", string.Empty);
+                if (url1.EndsWith("/"))
+                    url1 = url1.Remove(url1.Length - 1, 1);
 
+                url2 = url2.ToLower().Replace("/home/index", string.Empty).Replace("/index", string.Empty);
+                if (url2.EndsWith("/"))
+                    url2 = url2.Remove(url2.Length - 1, 1);
+
+                if (url1 == url2)
+                    return true;
+            }
+        }
         return false;
     }
 }
