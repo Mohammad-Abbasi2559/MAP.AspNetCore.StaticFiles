@@ -8,11 +8,13 @@
 ## FileContentType class
 This class work with cntent type
 
-#### fileContentType(string? name)
+#### `fileContentType(string? name)`
 Get content type from file name
-#### TryContentType(string name)
+#### `TryContentType(string name)`
 Check file content type is exist or not
 
+#### `TryContentType(string name, out string contentType)`
+Check file content type is exist or not
 
 ## RegularFileName class
 This class work with file name

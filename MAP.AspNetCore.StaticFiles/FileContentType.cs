@@ -6,9 +6,9 @@ public static class FileContentType
     /// <summary>
     /// This method take file extention and get contentType
     /// </summary>
-    /// <param name="Extension"></param>
+    /// <param name="Extension">File extension</param>
     /// <returns>ContentType</returns>
-    internal static string? FileCotnetType(string? Extension)
+    internal static string? FileContnetType(string? Extension)
     {
         if (Extension == null || Extension == "")
             throw new ArgumentNullException("extension");
@@ -17,6 +17,7 @@ public static class FileContentType
             Extension = "." + Extension;
 
         //List of file extensions and contentType
+        #region return ContentType
         switch (Extension)
         {
             case ".323": return "text/h323";
@@ -400,16 +401,17 @@ public static class FileContentType
             default:
                 return null;
         }
+        #endregion
     }
 
     /// <summary>
     /// Get file ContentType from name
     /// </summary>
-    /// <param name="name"></param>
-    /// <returns></returns>
-    public static string? fileContentType(string name)
+    /// <param name="name">File name</param>
+    /// <returns>return ContentType</returns>
+    public static string? GetContentType(string name)
     {
-        return FileCotnetType(name.Split(".").AsQueryable().LastOrDefault());
+        return FileContnetType(name.Split(".").LastOrDefault());
     }
 
 
@@ -417,11 +419,30 @@ public static class FileContentType
     /// Check ContentType Exist or Not
     /// </summary>
     /// <param name="fileName">FileName</param>
-    /// <returns></returns>
+    /// <returns>bool</returns>
     public static bool TryContentType(string fileName)
     {
-        if (FileCotnetType(fileName.Split(".").AsQueryable().LastOrDefault()) == null)
+        if (FileContnetType(fileName.Split(".").LastOrDefault()) == null)
         { return false; }
         return true;
     }
+
+    /// <summary>
+    /// Check ContentType Exist or Not, and set contentType
+    /// </summary>
+    /// <param name="fileName">File name</param>
+    /// <param name="contentType">Set contentType</param>
+    /// <returns></returns>
+    public static bool TryContentType(string fileName, out string? contentType)
+    {
+        string? contentTypeString = FileContnetType(fileName.Split(".").LastOrDefault());
+        if (contentTypeString == null)
+        {
+            contentType = null;
+            return false;
+        }
+        contentType = contentTypeString;
+        return true;
+    }
 }
+
